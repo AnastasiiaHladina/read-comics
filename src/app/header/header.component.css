@@ -1,0 +1,65 @@
+header{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  width: 100%;
+  background-color: #252124;
+}
+.header-content{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  list-style-type: none;
+  font-family:  sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+#logo{
+  color: #f1005a;
+  text-shadow:
+    2px 2px #f1005a,
+    4px 4px black,
+
+    8px 8px #8b0037,
+    10px 10px black,
+
+    14px 14px #480017,
+    16px 16px black;
+  font-size: 78px;
+}
+#logo:hover{
+  cursor: pointer;
+  color: #ff0887;
+}
+#list-link, #heroes-link, #publ-link{
+  text-decoration: none;
+  font-size: 28px;
+  color: dimgrey;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  cursor: pointer;
+}
+#list-link:hover, #heroes-link:hover, #publ-link:hover{
+  color: #f1005a;
+  box-shadow: inset 0 0 30px rgba(131, 131, 131, 0.5);
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media screen and (max-width: 1400px) { /*  < 1400px  */
+  .header-content{
+    grid-column-gap: 20px;
+  }
+}
+@media screen and (max-width: 670px) { /*  < 670px  */
+  header {
+    grid-template-columns: 0fr 1fr 0fr;
+  }
+  #logo{
+    font-size: 48px;
+  }
+  #list-link, #heroes-link, #publ-link {
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
